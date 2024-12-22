@@ -21,19 +21,12 @@ public class CategoryService {
         return categoryRepository.findAll();
     }
 
-    public Category getCategoryById(int id) {
-        return categoryRepository.findById(id).get();
-    }
-
-    public void deleteCategoryById(int id) {
+    public void deleteCategoryById(Long id) {
         categoryRepository.deleteById(id);
     }
 
-    public Optional<Category> getCategoryBtId(int id) {
+    public Optional<Category> getCategoryById(Long id) {
         return categoryRepository.findById(id);
     }
 
-    public Category updateCategory(Category category) {
-        return categoryRepository.save(category);
-    }
 }
